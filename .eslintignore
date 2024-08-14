@@ -1,0 +1,6 @@
+src/database/migrations/*.js
+node_modules/**/*.js
+coverage
+.eslintrc.js
+src/main.ts
+tests/account.e2e-spec.ts
