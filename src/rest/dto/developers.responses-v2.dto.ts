@@ -2,8 +2,8 @@ import { ApiModel, ApiModelProperty } from 'swagger-express-ts';
 import { IDeveloper } from '../../domain/developers/types';
 
 @ApiModel()
-export class DeveloperDto implements IDeveloper {
-  @ApiModelProperty()
+export class DeveloperV2Dto implements IDeveloper {
+  @ApiModelProperty({ required: true, type: 'string' })
   id: string;
 
   @ApiModelProperty()
@@ -14,4 +14,7 @@ export class DeveloperDto implements IDeveloper {
 
   @ApiModelProperty()
   email: string;
+
+  @ApiModelProperty()
+  revenue?: number;
 }
