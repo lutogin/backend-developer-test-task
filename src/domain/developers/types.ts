@@ -1,12 +1,10 @@
 export interface IDeveloper {
-  id: string
 
-  firstName?: string
-  lastName?: string
+	id: string
 
-  email: string
+	firstName?: string
+	lastName?: string
 
-  revenue?: number
+	email: string
+
 }
-
-export type DeveloperFields = keyof IDeveloper;

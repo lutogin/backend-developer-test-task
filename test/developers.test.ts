@@ -48,20 +48,4 @@ describe('Developers API tests examples', () => {
 
 	})
 
-	it('should BAT fetch developers (e2e, real repository used) V2', async () => {
-
-		const result = await request.get(`/api/v2/developers?include[0]=revenue&include[1]=id&include[2]=firstName&include[3]=lastName&include[4]=email`)
-
-		expect(result.status).toBe(200)
-		expect(result.body?.length).toBeGreaterThan(0)
-
-		for( const developer of result.body ) {
-			expect(developer).toHaveProperty('id')
-			expect(developer).toHaveProperty('firstName')
-			expect(developer).toHaveProperty('lastName')
-			expect(developer).toHaveProperty('email')
-			expect(developer).toHaveProperty('revenue')
-		}
-
-	})
 })
